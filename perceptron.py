@@ -9,7 +9,8 @@ b = int(input("Enter the bias: "))
 threshold = 0.2
 
 print("itr\tx1\tx2\tt\tyin\ty\tw1\tw2\tb")
-for i in range(len(x1)):
+for j in range(len(x1)*3):
+    i = j%(len(x1))
     yin = b + x1[i]*w1 + x2[i]*w2
 
     if yin > threshold:
